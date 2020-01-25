@@ -119,7 +119,7 @@ footer {
             margin-right: -8px;
         }
         .container {
-            width: 976px;
+           max-width: 976px;
             margin-left: auto;
             margin-right: auto;
         }
