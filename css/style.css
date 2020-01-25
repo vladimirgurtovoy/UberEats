@@ -127,6 +127,7 @@ footer {
             right: 0;
         }
         .footer {
+            margin: 0;
             width: 100%;
         }
     }
