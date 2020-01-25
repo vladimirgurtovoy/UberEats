@@ -112,22 +112,29 @@ footer {
 .footer__logo span {
     color: #5FB709;
 }
-    @media (max-width: 1123px) {
-        .row {
-            margin: 0;
-            margin-left: -8px;
-            margin-right: -8px;
-        }
+    @media (max-width: 1124px) {
         .container {
-           max-width: 976px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 976px;
         }
         .rest-card__img__sale {
             right: 0;
         }
         .footer {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 976px) {
+        .row {
             margin: 0;
+        }
+        .container {
+            max-width: 100%;
+        }
+        .rest-card__img__sale {
+            right: 0;
+        }
+        .footer {
             width: 100%;
         }
     }
