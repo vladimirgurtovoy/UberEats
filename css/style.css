@@ -112,7 +112,7 @@ footer {
 .footer__logo span {
     color: #5FB709;
 }
-    @media (max-width: 992px) {
+    @media (max-width: 1124px) {
         .row {
             margin: 0;
         }
