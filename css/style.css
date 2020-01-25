@@ -112,6 +112,20 @@ footer {
 .footer__logo span {
     color: #5FB709;
 }
+    @media (max-width: 992px) {
+        .row {
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+        }
+        .rest-card__img__sale {
+            right: 0;
+        }
+        .footer {
+            width: 100%;
+        }
+    }
   
   @media (max-width: 768px) {
     .row {
