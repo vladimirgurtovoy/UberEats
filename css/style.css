@@ -366,6 +366,9 @@ footer {
     .search-block .row>.col-12:last-child {
         display: flex;
     }
+    .search__btn img {
+        height: 16px;
+    }
     .menu__send-food-title {
         display: flex;
         padding-top: 24px;
