@@ -6,12 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <nav class="menu">
+            <div class="container">
+                <div class="row">
+                        <div class="col-3">
+                            <div class="nav__logo">
+                                <div><img src="./images/Logo.svg"></div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="menu__send-food">
+                                <div>
+                                    <select name="" id="" class="menu__send-food-time">
+                                        <option value="ASAP">ASAP</option>
+                                    </select>
+                                </div>
+                                to
+                                <div>
+                                    <button class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
+                                    <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <div class="nav__buttons">
+                                <button class="nav__buttons-sign">Sign In</button>
+                                <button class="nav__buttons-reg">Register</button>
+                                <button class="nav__buttons-shop"><img src="/images/basket.svg"></button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </nav>
+        <div class="search-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form action="" class="search">
+                            <div class="search__btn">
+                                <button class="search__btn">
+                                    <img src="/images/search.svg" alt="search-icon">
+                                </button>
+                            </div>
+                            <div class="search__field">
+                                <input type="search" name="" id="" placeholder="Search for restaurant or cuisine">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 menu__send-food-title">
+                        <div>When</div>
+                        <div>To</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="menu__send-food">
+                            <div class="col-2">
+                                <select name="" id="" class="menu__send-food-time">
+                                    <option value="ASAP">ASAP</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
+                                <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </header>
     <main>
-
         <div class="container">
             <div class="row">
                <div class="col-12">
@@ -213,7 +282,11 @@
     </main>
     <footer>
         <div class="container">
-            <h2 class="footer__logo">Uber <span>Eats</span></h2>
+           <div class="row">
+                <div class="col-12">
+                    <h2 class="footer__logo">Uber <span>Eats</span></h2>
+                </div>
+           </div>
         </div>
     </footer>
 </body>
