@@ -16,7 +16,11 @@
                 <div class="row">
                         <div class="col-3">
                             <div class="nav__logo">
-                                <div><img src="./images/Logo.svg"></div>
+                                <div>
+                                    <a href="./index.html">
+                                        <img src="./images/Logo.svg">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-5">
@@ -28,17 +32,19 @@
                                 </div>
                                 to
                                 <div>
-                                    <button class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
-                                    <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
+                                    <form>
+                                        <button type="button" class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
+                                        <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
+                                    </form>
                                 </div>
                             </div>
                         </div>
                         <div class="col-1"></div>
                         <div class="col-3">
                             <div class="nav__buttons">
-                                <button class="nav__buttons-sign">Sign In</button>
-                                <button class="nav__buttons-reg">Register</button>
-                                <button class="nav__buttons-shop"><img src="./images/basket.svg"></button>
+                                <button type="button" class="nav__buttons-sign">Sign In</button>
+                                <button type="button" class="nav__buttons-reg">Register</button>
+                                <button type="button" class="nav__buttons-shop"><img src="./images/basket.svg"></button>
                             </div>
                         </div>
                 </div>
@@ -50,7 +56,7 @@
                     <div class="col-12">
                         <form action="" class="search">
                             <div class="search__btn">
-                                <button class="search__btn">
+                                <button type="button" class="search__btn">
                                     <img src="./images/search.svg" alt="search-icon">
                                 </button>
                             </div>
@@ -64,17 +70,19 @@
                         <div>To</div>
                     </div>
                     <div class="col-12">
-                        <div class="menu__send-food">
-                            <div class="col-2">
-                                <select name="" id="" class="menu__send-food-time">
-                                    <option value="ASAP">ASAP</option>
-                                </select>
+                        <form>
+                            <div class="menu__send-food">
+                                <div class="col-2">
+                                    <select name="" id="" class="menu__send-food-time">
+                                        <option value="ASAP">ASAP</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="button" class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
+                                    <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
+                                </div>
                             </div>
-                            <div>
-                                <button class="menu__send-food-to-btn"><img src="./images/Location.svg" alt="location icon"></button>
-                                <input type="text" value="ul. Bolshaya Dmitrovka,22" class="menu__send-food-to">
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -92,7 +100,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/burger.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">Макдоналдс — Газетный</h3>
@@ -110,7 +118,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/dim-sum.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">DimSum & Co — ЦДМ</h3>
@@ -134,7 +142,7 @@
                              <div class="rest-card__img__sale">
                                  Потратьте 300 ₴, сэкономьте 70 ₴
                              </div>
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">ДвижОК — Манежная</h3>
@@ -155,7 +163,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/nha.jpg" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">НЯ — NHA</h3>
@@ -176,7 +184,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/tochka.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">Точка Дзы — Цветной</h3>
@@ -197,7 +205,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/cinnabon.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">Cinnabon</h3>
@@ -218,7 +226,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/pizzlove.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">PIZZELOVE</h3>
@@ -239,7 +247,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/Zu_kafe.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">Zю кафе — Тверская</h3>
@@ -260,7 +268,7 @@
                      <a href="#" class="rest-card">
                          <div class="rest-card__img">
                              <img src="./images/BarBqCafe.png" alt="mac">
-                             <button type="submit" value="liked" class="rest-card__img__fav-but">
+                             <button type="button" value="liked" class="rest-card__img__fav-but">
                              </button>
                          </div>
                          <h3 class="rest-card__title">Bar BQ Cafe — Манежная</h3>
