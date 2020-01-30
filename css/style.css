@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     box-sizing: border-box;
     margin-top: 82px;
