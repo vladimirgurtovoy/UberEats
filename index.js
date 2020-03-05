@@ -32,7 +32,7 @@ btnLoadCards.addEventListener("click", makeFetch);
 function makeFetch() {
   if (offset == 1) {
     fetch(
-      `http://ubereats-demo-api.herokuapp.com/v1/places?offset=${offset}&limit=${limit}`
+      `https://ubereats-demo-api.now.sh/v1/places?offset=${offset}&limit=${limit}`
     )
       .then(res => res.json())
       .then(data => {
