@@ -1,42 +1,32 @@
+const url = `https://ubereats-demo-api.now.sh/v1/places`; //url of API
+
 let restCards = document.querySelector("#restaurants-cards");
-for (let i = 0; i < 6; i++) {
-  restCards.insertAdjacentHTML("beforeend", getPreloader());
-}
 let searchInput = document.querySelector(".search__input");
 let limit = 7;
 let offset = 1;
 let total = 0;
 let restInfo = [];
 let loaded = 0;
-searchInput.addEventListener("keyup", function() {
-  let inputText = searchInput.value.toLowerCase();
-  if (inputText !== "") {
-    restCards.innerHTML = "";
-    restInfo.filter(r => {
-      if (r.title.toLowerCase().indexOf(inputText) >= 0) {
-        restCards.insertAdjacentHTML("beforeend", getRestaurantCard(r));
-      }
-    });
-  } else {
-    restCards.innerHTML = "";
-    restInfo.forEach(r => {
-      restCards.insertAdjacentHTML("beforeend", getRestaurantCard(r));
-    });
-  }
-});
+let btnLoadCards = document.querySelector(".btn-load-cards");
+
+//create start preloaders
+for (let i = 0; i < 6; i++) {
+  restCards.insertAdjacentHTML("beforeend", getPreloader());
+}
 
 makeFetch();
-let btnLoadCards = document.querySelector(".btn-load-cards");
-btnLoadCards.addEventListener("click", makeFetch);
 
+//get places from api
 function makeFetch() {
   if (offset == 1) {
-    fetch(
-      `https://ubereats-demo-api.now.sh/v1/places?offset=${offset}&limit=${limit}`
-    )
-      .then(res => res.json())
+    fetch(url + `?offset=${offset}&limit=${limit}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
       .then(data => {
-        restCards.innerHTML = "";
+        restCards.innerHTML = ""; //delete preloaders
         for (let i = 0; i < data.items.length; i++) {
           restInfo.push(data.items[i]);
         }
@@ -50,13 +40,16 @@ function makeFetch() {
       })
       .catch(err => console.log(err));
   } else {
+    //create preloaders
     for (let i = 0; i < total - offset; i++) {
       restCards.insertAdjacentHTML("beforeend", getPreloader());
     }
-    fetch(
-      `http://ubereats-demo-api.herokuapp.com/v1/places?offset=${offset}&limit=${limit}`
-    )
-      .then(res => res.json())
+    fetch(url + `?offset=${offset}&limit=${limit}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
       .then(data => {
         let loadImgages = document.querySelectorAll(".loaderImg");
         loadImgages.forEach(img => {
@@ -74,11 +67,12 @@ function makeFetch() {
       })
       .catch(err => console.log(err));
   }
-}
+} //end function makeFetch
 
+//create card structure
 function getRestaurantCard(data) {
   return `
-      <div class="col-4">
+      <div class="col-4 col-sm-6 col-md-12">
       <a href="#" class="rest-card">
         <div class="rest-card__img" style="background-image: url(${data.img})">
           <button
@@ -102,18 +96,20 @@ function getRestaurantCard(data) {
       </a>
     </div>
       `;
-}
+} //end function getRestaurantCard()
 
+//create preloader
 function getPreloader() {
   return `
-    <div class="col-4 loaderImg">
+    <div class="col-4 col-sm-6 col-md-12 loaderImg">
     <div class="rest-card__img">
           <img src="./images/preloader.svg" alt="preload" />
         </div>
     </div>
     `;
-}
+} //and function getPreloader()
 
+//add cards to page
 function addRestCards() {
   for (loaded; loaded < offset; loaded++) {
     restCards.insertAdjacentHTML(
@@ -121,4 +117,25 @@ function addRestCards() {
       getRestaurantCard(restInfo[loaded])
     );
   }
-}
+} //end function addRestCards
+
+//filter places on page
+function keyUpPress() {
+  let inputText = searchInput.value.toLowerCase();
+  if (inputText !== "") {
+    restCards.innerHTML = "";
+    restInfo.filter(r => {
+      if (r.title.toLowerCase().indexOf(inputText) >= 0) {
+        restCards.insertAdjacentHTML("beforeend", getRestaurantCard(r));
+      }
+    });
+  } else {
+    restCards.innerHTML = "";
+    restInfo.forEach(r => {
+      restCards.insertAdjacentHTML("beforeend", getRestaurantCard(r));
+    });
+  }
+} //end function keyUpPress
+
+searchInput.addEventListener("keyup", keyUpPress);
+btnLoadCards.addEventListener("click", makeFetch);

@@ -186,6 +186,7 @@ main {
 }
 h2,
 h3 {
+  margin: 0;
   font-weight: 400;
 }
 
@@ -394,7 +395,7 @@ footer {
   .col-3 {
     flex-basis: 20%;
   }
-  .col-4 {
+  .col-sm-6 {
     flex-basis: 50%;
   }
   .menu .row .col-1 {
@@ -428,22 +429,25 @@ footer {
   }
 }
 
+@media (max-width: 650px) {
+  .menu .row .col-5 {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .nav__buttons {
     font-size: 11px;
     line-height: 13px;
   }
-  .col-4 {
+  .col-md-12 {
     flex-basis: 100%;
   }
-  .col-3 {
+  .col-md-6 {
     flex-basis: 46%;
   }
   header {
     margin-bottom: 40px;
-  }
-  .menu .row .col-5 {
-    display: none;
   }
   .nav__buttons-sign {
     width: 72px;
@@ -488,7 +492,7 @@ footer {
   footer {
     width: 100%;
   }
-  footer .col-4 {
+  footer .col-md-12 {
     flex-basis: 100%;
   }
   .footer__social-btn {
